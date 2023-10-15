@@ -1,0 +1,95 @@
+body::before {
+    content: "🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ebffe6, #ffffff); /* Warna latar belakang gradient */
+    font-size: 36px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* Menempatkan latar belakang di bawah konten */
+    opacity: 5; /* Opasitas teks latar belakang */
+    pointer-events: none; /* Membuat latar belakang tidak dapat diinteraksi */
+}
+
+body {
+    background-color: #ebffe6;
+    font-family: 'Pacifico', cursive, sans-serif; /* Font backup disarankan */
+    text-align: center;
+}
+
+.container {
+    margin: 20% auto;
+    padding: px; /* Tambahkan padding */
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);
+    max-width: 400px;
+    animation: fadeIn 0.5s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+h1 {
+    color: #FF1493;
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.balloon {
+    font-size: 24px;
+    color: #ff0000;
+    transform: rotate(-15deg);
+    display: inline-block;
+    margin: 10px;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cake {
+    max-width: 100%;
+    margin-top: 20px;
+    animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animasi masuk saat halaman dibuka */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi saat kursor mendekat ke kontainer */
+.container:hover {
+    background-color: #ffffff; /* Ganti warna latar belakang saat hover */
+    transform: scale(1.01); /* Perbesar kontainer saat hover */
+}
